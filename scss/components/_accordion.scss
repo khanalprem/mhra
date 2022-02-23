@@ -1,0 +1,191 @@
+.acc {
+  .acc-list {
+    .acc-header {
+      position: relative;
+      padding: 0.5rem 0;
+      @include flexbox();
+      @include align-items(center);
+      cursor: pointer;
+      h5 {
+        font-size: 0.8125rem;
+        @include flex-grow(1);
+        @include trim(1);
+      }
+      i {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+      }
+      &::after,
+      &::before {
+        font-size: 1.4rem;
+        font-family: 'Material Icons';
+        color: var(--body-color);
+        z-index: 99;
+        line-height: 1;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(column);
+        @include radius(100%);
+      }
+      .custom-checkbox {
+        margin: 0;
+        label {
+          margin: 0;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+      }
+      &.is-start {
+        @include justify-content(flex-start);
+      }
+      &.is-end {
+        @include justify-content(flex-end);
+      }
+      &.is-between {
+        @include justify-content(space-between);
+      }
+    }
+    .acc-body {
+      display: none;
+      &::-webkit-scrollbar {
+        width: 4px;
+        background: var(--clr-body-300);
+        @include radius(4px);
+      }
+      &::-webkit-scrollbar-track {
+        background-color: var(--clr-body-300);
+        @include radius(4px);
+      }
+      &::-webkit-scrollbar-thumb {
+        @include radius(4px);
+        background: var(--border-dark);
+      }
+      .custom-checkbox {
+        label {
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+      ul {
+        &.is-list {
+          li {
+            &:hover,
+            &.is-active {
+              background-color: var(--secondary-100);
+              cursor: pointer;
+            }
+          }
+          &.is-after {
+            li {
+              position: relative;
+            }
+            &.is-check {
+              li {
+                &.is-active {
+                  background-color: var(--secondary-100);
+                  a {
+                    color: var(--heading-color);
+                  }
+                }
+              }
+            }
+          }
+          ul {
+            li {
+              padding-left: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+    &.is-bg {
+      background-color: var(--bg-color);
+      @include radius(5px);
+      .acc-header {
+        padding: 0.6125rem;
+      }
+      .acc-body {
+        padding: 0 0.6125rem 0.6125rem 0.6125rem;
+        &.is-bg {
+          background-color: var(--clr-white-900);
+          border: 1px solid var(--clr-body-300);
+          @include radius(5px);
+          padding-top: 10px;
+        }
+      }
+    }
+    &.is-active {
+      .acc-header {
+        h5 {
+          color: var(--primary-color);
+        }
+      }
+      .acc-body {
+        display: block;
+      }
+    }
+  }
+  &.is-before {
+    .acc-list {
+      .acc-header {
+        &::before {
+          content: 'arrow_drop_down';
+          margin-right: 0.5rem;
+        }
+      }
+      &.is-active {
+        .acc-header {
+          &::before {
+            content: 'arrow_drop_up';
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  &.is-after {
+    .acc-list {
+      .acc-header {
+        &::after {
+          content: 'expand_more';
+          width: 24px;
+          height: 24px;
+          margin-left: 0.6125rem;
+          font-size: 1rem;
+        }
+      }
+      &.is-active {
+        .acc-header {
+          &::after {
+            content: 'expand_less';
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+  &.acc-border {
+    @include radius(4px);
+    .acc-list {
+      .acc-header {
+        padding: 0.5rem 0.6125rem;
+      }
+      .acc-body {
+        padding: 0;
+        ul {
+          li {
+            padding: 0.35rem 0.6125rem;
+            padding-left: 2.2rem;
+            a {
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--clr-body-300);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'switcher';
+@import 'button';
+@import 'field';
+@import 'checkbox';
+@import 'search';
+@import 'social-icons';
+@import 'pm-dropdown';
+@import 'pm-select';
+@import 'pm-upload';
+@import 'progress';
+@import './date-picker';
+@import 'range-slider';
+
+.pm-group {
+  select {
+    &.pm-control {
+      -webkit-outline: none;
+      outline: none;
+    }
+  }
+}

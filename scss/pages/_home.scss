@@ -1,0 +1,29 @@
+.is-admin {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dbd-cntr {
+  position: relative;
+  width: calc(100% - 250px);
+  padding: 0 2rem;
+  &.dbd-cntr_active {
+    width: calc(100% - 75px);
+    padding: 0 1rem;
+  }
+}
+
+.mhra-project_grid {
+  .pm-card {
+    min-height: 191px;
+    &_bg {
+      cursor: pointer;
+    }
+  }
+}
+
+.pm-list_search {
+  margin-bottom: 1rem;
+}

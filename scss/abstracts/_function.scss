@@ -1,0 +1,65 @@
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+  --fs-sm: clamp(0.61rem, 0.62rem + -0.07vw, 0.56rem);
+  --fs-md: clamp(0.73rem, 0.74rem + -0.04vw, 0.7rem);
+  --fs-body: clamp(0.88rem, 0.88rem + 0vw, 0.88rem);
+  --fs-btn: clamp(0.88rem, 0.88rem + 0vw, 0.88rem);
+  --fs-h6: clamp(1.05rem, 1.04rem + 0.07vw, 1.09rem);
+  --fs-h5: clamp(1.26rem, 1.23rem + 0.16vw, 1.37rem);
+  --fs-h4: clamp(1.51rem, 1.45rem + 0.3vw, 1.71rem);
+  --fs-h3: clamp(1.81rem, 1.72rem + 0.49vw, 2.14rem);
+  --fs-h2: clamp(2.18rem, 2.03rem + 0.75vw, 2.67rem);
+  --fs-h1: clamp(2.61rem, 2.39rem + 1.11vw, 3.34rem);
+
+  // @each $screen-size,
+  // $font-size in $type-scale {
+  //     @if $screen-size==small {
+  //         @each $size,
+  //         $value in $font-size {
+  //             --fs-#{$size}:#{$value};
+  //         }
+  //     }
+  //     @else {
+  //         @include mq(small) {
+  //             @each $size,
+  //             $value in $font-size {
+  //                 --fs-#{$size}:#{$value};
+  //             }
+  //         }
+  //     }
+  // }
+}
+
+// @each $color, $shades in $colors {
+//   @each $shade, $value in $shades {
+//     .text-#{$color}-#{$shade} {
+//       color: $value;
+//     }
+//     .bg-#{$color}-#{$shade} {
+//       color: $value;
+//     }
+//   }
+// }
+
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+/// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- SOCIAL MEDIA META -->
+    <meta
+      property="og:description"
+      content="MHRA is a platform for remote supervision and monitoring that helps improve quality and reduce risk on construction, humanitarian, and development projects "
+    />
+    <meta property="og:image" content="preview.html" />
+    <meta
+      property="og:site_name"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      property="og:title"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://MHRA.com.np" />
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:site"
+      content="@MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:creator"
+      content="@MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:title"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:description"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta name="twitter:image" content="preview.html" />
+
+    <!--title-->
+    <title>MHRA is a platform for remote supervision and monitoring</title>
+
+    <!-- faveicon start   -->
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
+
+    <!-- stylesheet start -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body class="">
+    <div class="is-admin is-flex is-end">
+      <!-- Left Sidebar -->
+      <aside
+        id="leftsidebar"
+        class="dbd-sidebar dbd-sidebar_primary is-flex is-column is-around"
+      >
+        <div class="aside-header is-flex">
+          <div class="mobile-menu-icon">
+            <i class="material-icons mr-15">menu </i>
+          </div>
+          <figure><img src="images/logo.png" alt="" /></figure>
+        </div>
+        <div class="is-flex is-between is-column is-grow is-overflow">
+          <!-- sidebar menu start -->
+          <div class="menu is-flex is-column is-grow pt-10">
+            <ul class="menu-list">
+              <li class="menu-list_item menu-toggle is-active">
+                <a href="index.html">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="project"
+                        data-name="project"
+                        transform="translate(-23 -156)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g id="project" transform="translate(0.962 -758)">
+                          <path
+                            id="ic_folder_special_48px"
+                            d="M27.366,10.6H16.981L14.385,8H6.6A2.6,2.6,0,0,0,4,10.6V26.173a2.6,2.6,0,0,0,2.6,2.6H27.366a2.6,2.6,0,0,0,2.6-2.6V13.192A2.6,2.6,0,0,0,27.366,10.6ZM24.685,24.875l-3.81-2.233-3.81,2.233,1.013-4.323-3.362-2.908,4.433-.383,1.726-4.07,1.733,4.076,4.433.383-3.362,2.908Z"
+                            transform="translate(21.038 912)"
+                            fill="#fff"
+                            opacity="0.5"
+                          />
+                          <path
+                            id="ic_folder_special_48px-2"
+                            data-name="ic_folder_special_48px"
+                            d="M24.685,24.875l-3.81-2.233-3.81,2.233,1.013-4.323-3.362-2.908,4.433-.383,1.726-4.07,1.733,4.076,4.433.383-3.362,2.908Z"
+                            transform="translate(21.038 912)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Projects</div>
+                </a>
+                <ul>
+                  <li class="">
+                    <a href="#"><span>Current Weather</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Climate Normal & Variab…</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Future Climate Projection</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list_item menu-toggle">
+                <a href="#">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="users"
+                        transform="translate(-31 -219)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Group_5849"
+                          data-name="Group 5849"
+                          transform="translate(22 -138.156)"
+                        >
+                          <g
+                            id="Page-1"
+                            transform="translate(11 359.156)"
+                            opacity="0.5"
+                          >
+                            <g id="Icon-Set-Filled">
+                              <path
+                                id="user-list"
+                                d="M423.794,326.808c4.426,0,8.013-3.987,8.013-8.9s-3.587-8.9-8.013-8.9-8.013,3.987-8.013,8.9,3.587,8.9,8.013,8.9Zm7.749-2.387a9.287,9.287,0,0,1-15.5,0A5.278,5.278,0,0,0,414,328.588v3.561a5.343,5.343,0,0,0,5.342,5.342h8.9a5.343,5.343,0,0,0,5.342-5.342v-3.561a5.278,5.278,0,0,0-2.045-4.168Z"
+                                transform="translate(-414 -309)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Page-1-2"
+                            data-name="Page-1"
+                            transform="translate(11 357.156)"
+                          >
+                            <g
+                              id="Icon-Set-Filled-2"
+                              data-name="Icon-Set-Filled"
+                            >
+                              <path
+                                id="user-list-2"
+                                data-name="user-list"
+                                d="M441.6,325.027h-5.342a.89.89,0,0,0,0,1.781H441.6a.89.89,0,0,0,0-1.781Zm0-5.342h-7.123c-.492,0-.492,1.781,0,1.781H441.6a.89.89,0,1,0,0-1.781Zm-7.123-3.562H441.6a.89.89,0,0,0,0-1.781h-7.123c-.492,0-.492,1.781,0,1.781Zm7.123,14.246h-5.342a.89.89,0,0,0,0,1.781H441.6a.89.89,0,0,0,0-1.781Z"
+                                transform="translate(-414 -309)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Forms</div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#"><span>Pollution</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Greenhouse Gas Emissio…</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list_item menu-toggle">
+                <a href="#">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="forms"
+                        transform="translate(-23 -358)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Group_5852"
+                          data-name="Group 5852"
+                          transform="translate(-33 -458.508)"
+                        >
+                          <g
+                            id="Page-1"
+                            transform="translate(61 818.508)"
+                            opacity="0.5"
+                          >
+                            <g id="Icon-Set-Filled">
+                              <path
+                                id="file-document"
+                                d="M172.9,107.759a1.69,1.69,0,0,1-1.69-1.69V102.69l5.069,5.069ZM171.207,101v.024L159.379,101A3.379,3.379,0,0,0,156,104.379v20.276a3.379,3.379,0,0,0,3.379,3.379h15.207a3.379,3.379,0,0,0,3.379-3.379v-16.9L171.207,101Z"
+                                transform="translate(-156 -101)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Page-1-2"
+                            data-name="Page-1"
+                            transform="translate(65.744 831.017)"
+                          >
+                            <g
+                              id="Icon-Set-Filled-2"
+                              data-name="Icon-Set-Filled"
+                              transform="translate(0 0)"
+                            >
+                              <path
+                                id="multiple-documents-files"
+                                d="M228.34,115.588h-9.491a1.053,1.053,0,1,1,0-2.107h9.491a1.053,1.053,0,1,1,0,2.107Zm0,5.267h-9.491a1.053,1.053,0,1,1,0-2.107h9.491a1.053,1.053,0,1,1,0,2.107Z"
+                                transform="translate(-217.794 -113.481)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Users</div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#"><span>Agro Map</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Crop Information</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Municipal Agro-Met Bull…</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-footer is-flex is-between is-enter">
+            <div class="is-flex is-start is-align-center is-grow">
+              <div class="pf-img">
+                <span class="is-circle is-sm">
+                  <img src="images/admin/profile.jpg" alt="profile" />
+                </span>
+              </div>
+
+              <div class="af-content">
+                <p>Anna Shree</p>
+              </div>
+            </div>
+            <div class="pm-dropdown is-option is-right">
+              <a href="#"><i class="material-icons more_vert">more_vert</i></a>
+              <ul class="pm-dropdown-menu" style="display: none">
+                <li>
+                  <a href="#"
+                    ><i class="material-icons">edit</i><span>Edit</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="material-icons">delete</i><span>Delete</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="dbd-cntr">
+        <div class="dbd-header">
+          <div class="container-fluid">
+            <div class="is-flex is-between is-gap-15 is-align-center is-wrap">
+              <h6>Users</h6>
+              <div class="is-flex is-end is-align-center is-gap-20">
+                <div class="is-flex is-align-center">
+                  <h6 class="mr-10">232</h6>
+                  <span>users</span>
+                </div>
+                <div class="pm-select">
+                  <div class="pm-select_item">
+                    <span>Role</span>
+                  </div>
+                  <ul class="pm-select_list left-dropdown">
+                    <li data-value="2022-01-01">2022-01-01</li>
+                    <li data-value="2022-01-02">2022-01-02</li>
+                    <li data-value="2022-01-02">2022-01-02</li>
+                    <li data-value="2022-01-02">2022-01-02</li>
+                  </ul>
+                </div>
+                <div class="search">
+                  <div class="search-wrap">
+                    <span class="search-wrap_icon"
+                      ><i class="material-icons">search</i></span
+                    >
+                    <input class="pm-control" type="search" />
+                  </div>
+                </div>
+                <div class="is-btn is-btn_primary is-btn_icon" modal-link="add-user">
+                  <i class="material-icons">add_circle_outline</i>
+                  <span>add user</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pm-modal" id="add-user">
+            <div class="pm-modal_cntr">
+              <div class="pm-modal_header is-flex is-between is-gap-15">
+                <h6 class="is-grow">Add new user</h6>
+                <div class="is-flex is-end is-align-center">
+                  <div class="pm-dropdown pm-dropdown_option pm-dropdown_right">
+                    <a href="#" class="is-circle">
+                      <i class="material-icons">more_vert</i>
+                    </a>
+                    <ul class="pm-dropdown_menu">
+                      <li><a href="#">Edit</a></li>
+                      <li><a href="#">Remove</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="pm-modal_close">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </div>
+              <div class="pm-modal_body">
+                <div class="is-flex is-wrap is-gap-15">
+                    <div class="pm-group is-grow">
+                        <label>Fist Name</label>
+                        <input
+                        type="text"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                    <div class="pm-group is-grow">
+                        <label>Last Name</label>
+                        <input
+                        type="text"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                </div>
+                <div class="is-flex is-wrap is-gap-15">
+                    <div class="pm-group is-grow">
+                        <label>Phone</label>
+                        <input
+                        type="text"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                    <div class="pm-group is-grow">
+                        <label>Email</label>
+                        <input
+                        type="text"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                </div>
+                <div class="pm-group">
+                    <label>address</label>
+                    <input type="text" class="pm-control" placeholder="address" />
+                  </div>
+                <div class="is-flex is-wrap is-gap-15">
+                    <div class="pm-group is-grow">
+                        <label>password</label>
+                        <input
+                        type="password"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                    <div class="pm-group is-grow">
+                        <label>confirm password</label>
+                        <input
+                        type="password"
+                        class="pm-control"
+                        placeholder=""
+                        />
+                    </div>
+                </div>
+                <div class="pm-group">
+                    <label>Upload area file</label>
+                    <div class="is-flex is-start is-align-center is-gap-15 ">
+                        <figure class="is-circle is-circle_sm is-circle_img is-border">
+                            <img src="images/user.jpg" alt=""/>
+                        </figure>
+                        <div class="flex-content">
+                            
+                            <div class="pmupload-btn is-flex is-start is-align-center">
+                                <label for="upload " class="is-flex is-align-center">
+                                    <i class="material-icons">upload</i>
+                                    <span>upload</span>
+                                    <input type="file" id="upload">
+                                </label>
+                                <span class="fs-md">.GSON or .CSV file formate, below 10 MB file
+                                size.</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="pm-modal_footer is-flex is-center is-gap-10">
+                <button class="is-btn is-btn_secondary">cancel</button>
+                <button class="is-btn is-btn_primary">Save</button>
+              </div>
+            </div>
+          </div>
+
+        <div class="dbd-body">
+          <div class="container-fluid">
+            <div class="pm-table pm-table_border pm-table_sticky">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <div
+                          class="is-flex is-start is-align-center pm-table_arrow is-active"
+                        >
+                          <span>name</span>
+                          <span class="updown-arrow">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10.031"
+                              height="5.016"
+                              viewBox="0 0 10.031 5.016"
+                            >
+                              <path
+                                id="Path_10343"
+                                data-name="Path 10343"
+                                d="M6.984-14.016H17.016L12-9Z"
+                                transform="translate(-6.984 14.016)"
+                                fill=""
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div
+                          class="is-flex is-start is-align-center pm-table_arrow"
+                        >
+                          <span>phone</span>
+                          <span class="updown-arrow">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10.031"
+                              height="5.016"
+                              viewBox="0 0 10.031 5.016"
+                            >
+                              <path
+                                id="Path_10343"
+                                data-name="Path 10343"
+                                d="M6.984-14.016H17.016L12-9Z"
+                                transform="translate(-6.984 14.016)"
+                                fill=""
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div
+                          class="is-flex is-start is-align-center pm-table_arrow"
+                        >
+                          <span>email</span>
+                          <span class="updown-arrow">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10.031"
+                              height="5.016"
+                              viewBox="0 0 10.031 5.016"
+                            >
+                              <path
+                                id="Path_10343"
+                                data-name="Path 10343"
+                                d="M6.984-14.016H17.016L12-9Z"
+                                transform="translate(-6.984 14.016)"
+                                fill=""
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div
+                          class="is-flex is-start is-align-center pm-table_arrow"
+                        >
+                          <span>role</span>
+                          <span class="updown-arrow">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10.031"
+                              height="5.016"
+                              viewBox="0 0 10.031 5.016"
+                            >
+                              <path
+                                id="Path_10343"
+                                data-name="Path 10343"
+                                d="M6.984-14.016H17.016L12-9Z"
+                                transform="translate(-6.984 14.016)"
+                                fill=""
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div
+                          class="is-flex is-start is-align-center pm-table_arrow"
+                        >
+                          <span>cluster</span>
+                          <span class="updown-arrow">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="10.031"
+                              height="5.016"
+                              viewBox="0 0 10.031 5.016"
+                            >
+                              <path
+                                id="Path_10343"
+                                data-name="Path 10343"
+                                d="M6.984-14.016H17.016L12-9Z"
+                                transform="translate(-6.984 14.016)"
+                                fill=""
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="is-flex is-align-center">
+                          <figure class="is-circle is-circle_xs">
+                            <img src="images/user.jpg" alt="user" />
+                          </figure>
+                          <p class="fw-600 is-capitalize ml-10">
+                            Sammantha Smith
+                          </p>
+                        </div>
+                      </td>
+                      <td><span>984038261</span></td>
+                      <td><p class="is-email">sam.smith@mail.com</p></td>
+                      <td><span>District Officer </span></td>
+                      <td><p class="">3</p></td>
+                      <td>
+                        <div class="is-flex is-end">
+                          <div
+                            class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                          >
+                            <a href="#" class="is-circle is-circle_xs">
+                              <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="pm-dropdown_menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Remove</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="is-flex is-align-center">
+                          <figure class="is-circle is-circle_xs">
+                            <img src="images/user.jpg" alt="user" />
+                          </figure>
+                          <p class="fw-600 is-capitalize ml-10">
+                            Sammantha Smith
+                          </p>
+                        </div>
+                      </td>
+                      <td><span>984038261</span></td>
+                      <td><p class="is-email">sam.smith@mail.com</p></td>
+                      <td><span>District Officer </span></td>
+                      <td><p class="">3</p></td>
+                      <td>
+                        <div class="is-flex is-end">
+                          <div
+                            class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                          >
+                            <a href="#" class="is-circle is-circle_xs">
+                              <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="pm-dropdown_menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Remove</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="is-flex is-align-center">
+                          <figure class="is-circle is-circle_xs">
+                            <img src="images/user.jpg" alt="user" />
+                          </figure>
+                          <p class="fw-600 is-capitalize ml-10">
+                            Sammantha Smith
+                          </p>
+                        </div>
+                      </td>
+                      <td><span>984038261</span></td>
+                      <td><p class="is-email">sam.smith@mail.com</p></td>
+                      <td><span>District Officer </span></td>
+                      <td><p class="">3</p></td>
+                      <td>
+                        <div class="is-flex is-end">
+                          <div
+                            class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                          >
+                            <a href="#" class="is-circle is-circle_xs">
+                              <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="pm-dropdown_menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Remove</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="is-flex is-align-center">
+                          <figure class="is-circle is-circle_xs">
+                            <img src="images/user.jpg" alt="user" />
+                          </figure>
+                          <p class="fw-600 is-capitalize ml-10">
+                            Sammantha Smith
+                          </p>
+                        </div>
+                      </td>
+                      <td><span>984038261</span></td>
+                      <td><p class="is-email">sam.smith@mail.com</p></td>
+                      <td><span>District Officer </span></td>
+                      <td><p class="">3</p></td>
+                      <td>
+                        <div class="is-flex is-end">
+                          <div
+                            class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                          >
+                            <a href="#" class="is-circle is-circle_xs">
+                              <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="pm-dropdown_menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Remove</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="is-flex is-align-center">
+                          <figure class="is-circle is-circle_xs">
+                            <img src="images/user.jpg" alt="user" />
+                          </figure>
+                          <p class="fw-600 is-capitalize ml-10">
+                            Sammantha Smith
+                          </p>
+                        </div>
+                      </td>
+                      <td><span>984038261</span></td>
+                      <td><p class="is-email">sam.smith@mail.com</p></td>
+                      <td><span>District Officer </span></td>
+                      <td><p class="">3</p></td>
+                      <td>
+                        <div class="is-flex is-end">
+                          <div
+                            class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                          >
+                            <a href="#" class="is-circle is-circle_xs">
+                              <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="pm-dropdown_menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Remove</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pm-table_note is-flex is-center fs-md">
+                <p>You have reached the end of data</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Jquery Core Js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/mhra.js"></script>
+  </body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- SOCIAL MEDIA META -->
+    <meta
+      property="og:description"
+      content="MHRA is a platform for remote supervision and monitoring that helps improve quality and reduce risk on construction, humanitarian, and development projects "
+    />
+    <meta property="og:image" content="preview.html" />
+    <meta
+      property="og:site_name"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      property="og:title"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://MHRA.com.np" />
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:site"
+      content="@MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:creator"
+      content="@MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:title"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta
+      name="twitter:description"
+      content="MHRA is a platform for remote supervision and monitoring"
+    />
+    <meta name="twitter:image" content="preview.html" />
+
+    <!--title-->
+    <title>MHRA is a platform for remote supervision and monitoring</title>
+
+    <!-- faveicon start   -->
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
+
+    <!-- stylesheet start -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body class="">
+    <div class="is-admin is-flex is-end">
+      <!-- Left Sidebar -->
+      <aside
+        id="leftsidebar"
+        class="dbd-sidebar dbd-sidebar_primary is-flex is-column is-around"
+      >
+        <div class="aside-header is-flex">
+          <div class="mobile-menu-icon">
+            <i class="material-icons mr-15">menu </i>
+          </div>
+          <figure><img src="images/logo.png" alt="" /></figure>
+        </div>
+        <div class="is-flex is-between is-column is-grow is-overflow">
+          <!-- sidebar menu start -->
+          <div class="menu is-flex is-column is-grow pt-10">
+            <ul class="menu-list">
+              <li class="menu-list_item menu-toggle is-active">
+                <a href="index.html">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="project"
+                        data-name="project"
+                        transform="translate(-23 -156)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g id="project" transform="translate(0.962 -758)">
+                          <path
+                            id="ic_folder_special_48px"
+                            d="M27.366,10.6H16.981L14.385,8H6.6A2.6,2.6,0,0,0,4,10.6V26.173a2.6,2.6,0,0,0,2.6,2.6H27.366a2.6,2.6,0,0,0,2.6-2.6V13.192A2.6,2.6,0,0,0,27.366,10.6ZM24.685,24.875l-3.81-2.233-3.81,2.233,1.013-4.323-3.362-2.908,4.433-.383,1.726-4.07,1.733,4.076,4.433.383-3.362,2.908Z"
+                            transform="translate(21.038 912)"
+                            fill="#fff"
+                            opacity="0.5"
+                          />
+                          <path
+                            id="ic_folder_special_48px-2"
+                            data-name="ic_folder_special_48px"
+                            d="M24.685,24.875l-3.81-2.233-3.81,2.233,1.013-4.323-3.362-2.908,4.433-.383,1.726-4.07,1.733,4.076,4.433.383-3.362,2.908Z"
+                            transform="translate(21.038 912)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Projects</div>
+                </a>
+                <ul>
+                  <li class="">
+                    <a href="#"><span>Current Weather</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Climate Normal & Variab…</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Future Climate Projection</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list_item menu-toggle">
+                <a href="#">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="users"
+                        transform="translate(-31 -219)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Group_5849"
+                          data-name="Group 5849"
+                          transform="translate(22 -138.156)"
+                        >
+                          <g
+                            id="Page-1"
+                            transform="translate(11 359.156)"
+                            opacity="0.5"
+                          >
+                            <g id="Icon-Set-Filled">
+                              <path
+                                id="user-list"
+                                d="M423.794,326.808c4.426,0,8.013-3.987,8.013-8.9s-3.587-8.9-8.013-8.9-8.013,3.987-8.013,8.9,3.587,8.9,8.013,8.9Zm7.749-2.387a9.287,9.287,0,0,1-15.5,0A5.278,5.278,0,0,0,414,328.588v3.561a5.343,5.343,0,0,0,5.342,5.342h8.9a5.343,5.343,0,0,0,5.342-5.342v-3.561a5.278,5.278,0,0,0-2.045-4.168Z"
+                                transform="translate(-414 -309)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Page-1-2"
+                            data-name="Page-1"
+                            transform="translate(11 357.156)"
+                          >
+                            <g
+                              id="Icon-Set-Filled-2"
+                              data-name="Icon-Set-Filled"
+                            >
+                              <path
+                                id="user-list-2"
+                                data-name="user-list"
+                                d="M441.6,325.027h-5.342a.89.89,0,0,0,0,1.781H441.6a.89.89,0,0,0,0-1.781Zm0-5.342h-7.123c-.492,0-.492,1.781,0,1.781H441.6a.89.89,0,1,0,0-1.781Zm-7.123-3.562H441.6a.89.89,0,0,0,0-1.781h-7.123c-.492,0-.492,1.781,0,1.781Zm7.123,14.246h-5.342a.89.89,0,0,0,0,1.781H441.6a.89.89,0,0,0,0-1.781Z"
+                                transform="translate(-414 -309)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Forms</div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#"><span>Pollution</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Greenhouse Gas Emissio…</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list_item menu-toggle">
+                <a href="#">
+                  <div class="menu-list_icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <g
+                        id="forms"
+                        transform="translate(-23 -358)"
+                        clip-path="url(#clip-path)"
+                      >
+                        <g
+                          id="Group_5852"
+                          data-name="Group 5852"
+                          transform="translate(-33 -458.508)"
+                        >
+                          <g
+                            id="Page-1"
+                            transform="translate(61 818.508)"
+                            opacity="0.5"
+                          >
+                            <g id="Icon-Set-Filled">
+                              <path
+                                id="file-document"
+                                d="M172.9,107.759a1.69,1.69,0,0,1-1.69-1.69V102.69l5.069,5.069ZM171.207,101v.024L159.379,101A3.379,3.379,0,0,0,156,104.379v20.276a3.379,3.379,0,0,0,3.379,3.379h15.207a3.379,3.379,0,0,0,3.379-3.379v-16.9L171.207,101Z"
+                                transform="translate(-156 -101)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                          <g
+                            id="Page-1-2"
+                            data-name="Page-1"
+                            transform="translate(65.744 831.017)"
+                          >
+                            <g
+                              id="Icon-Set-Filled-2"
+                              data-name="Icon-Set-Filled"
+                              transform="translate(0 0)"
+                            >
+                              <path
+                                id="multiple-documents-files"
+                                d="M228.34,115.588h-9.491a1.053,1.053,0,1,1,0-2.107h9.491a1.053,1.053,0,1,1,0,2.107Zm0,5.267h-9.491a1.053,1.053,0,1,1,0-2.107h9.491a1.053,1.053,0,1,1,0,2.107Z"
+                                transform="translate(-217.794 -113.481)"
+                                fill="#fff"
+                                fill-rule="evenodd"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="menu-list_hidden">Users</div>
+                </a>
+                <ul>
+                  <li>
+                    <a href="#"><span>Agro Map</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Crop Information</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Municipal Agro-Met Bull…</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-footer is-flex is-between is-enter">
+            <div class="is-flex is-start is-align-center is-grow">
+              <div class="pf-img">
+                <span class="is-circle is-sm">
+                  <img src="images/admin/profile.jpg" alt="profile" />
+                </span>
+              </div>
+
+              <div class="af-content">
+                <p>Anna Shree</p>
+              </div>
+            </div>
+            <div class="pm-dropdown is-option is-right">
+              <a href="#"><i class="material-icons more_vert">more_vert</i></a>
+              <ul class="pm-dropdown-menu" style="display: none">
+                <li>
+                  <a href="#"
+                    ><i class="material-icons">edit</i><span>Edit</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="material-icons">delete</i><span>Delete</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="dbd-cntr">
+        <div class="dbd-header">
+          <div class="container-fluid">
+            <div class="is-flex is-start is-gap-1">
+              <h3>Projects</h3>
+              <div class="is-grow is-flex is-end">
+                <div class="is-flex is-end is-align-center is-gap-10">
+                  <div class="total-projects is-flex is-align-center mr-15">
+                    <h5 class="mr-05">5</h5>
+                    <span class="fs-md">Projects</span>
+                  </div>
+                  <div class="pm-select">
+                    <div class="pm-select_item"><span>District</span></div>
+                    <ul class="pm-select_list left-dropdown">
+                      <li data-value="Bagmati pardesh">Bagmati Pardesh</li>
+                      <li data-value="Gandaki">Gandaki</li>
+                      <li data-value="Lumbini">Lumbini</li>
+                      <li data-value="Bagmati">Gandaki</li>
+                    </ul>
+                  </div>
+                  <div class="search">
+                    <div class="search-wrap">
+                      <span class="search-wrap_icon"
+                        ><i class="material-icons">search</i></span
+                      >
+                      <input class="pm-control" type="search" />
+                    </div>
+                  </div>
+                  <button
+                    class="is-btn is-btn_primary is-btn_icon"
+                    modal-link="create-project"
+                  >
+                    <i class="material-icons">add_circle_outline</i>
+                    <span>add project</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pm-modal" id="warning-modal">
+          <div class="pm-modal_cntr pm-modal_cntr_sm">
+            <div class="pm-modal_header is-flex is-between is-gap-15">
+              <div class="is-flex is-start is-align-center is-gap-10">
+                <div class="is-square si-square-red is-square_xs">
+                  <svg
+                    id="Group_4868"
+                    data-name="Group 4868"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24.086"
+                    height="29.785"
+                    viewBox="0 0 24.086 29.785"
+                  >
+                    <path
+                      id="Path_10262"
+                      data-name="Path 10262"
+                      d="M66.839,3.569H62.2a4.031,4.031,0,0,0-8.008,0H49.558a3.407,3.407,0,0,0-3.4,3.4v.175a3.406,3.406,0,0,0,2.15,3.161V26.383a3.407,3.407,0,0,0,3.4,3.4h12.98a3.407,3.407,0,0,0,3.4-3.4V10.307a3.406,3.406,0,0,0,2.15-3.161V6.972A3.407,3.407,0,0,0,66.839,3.569ZM58.2,1.614a2.422,2.422,0,0,1,2.373,1.955H55.825A2.422,2.422,0,0,1,58.2,1.614Zm8.279,24.769a1.791,1.791,0,0,1-1.789,1.789H51.708a1.791,1.791,0,0,1-1.789-1.789V10.549H66.477Zm2.15-19.236a1.791,1.791,0,0,1-1.789,1.789H49.558a1.791,1.791,0,0,1-1.789-1.789V6.972a1.791,1.791,0,0,1,1.789-1.789H66.839a1.791,1.791,0,0,1,1.789,1.789v.175Z"
+                      transform="translate(-46.155)"
+                      fill="#ff0f0f"
+                    />
+                    <path
+                      id="Path_10263"
+                      data-name="Path 10263"
+                      d="M158.882,260.27a.807.807,0,0,0,.807-.807v-9.085a.807.807,0,1,0-1.614,0v9.085A.807.807,0,0,0,158.882,260.27Z"
+                      transform="translate(-151.165 -234.162)"
+                      fill="#ff0f0f"
+                    />
+                    <path
+                      id="Path_10264"
+                      data-name="Path 10264"
+                      d="M228.952,260.27a.807.807,0,0,0,.807-.807v-9.085a.807.807,0,1,0-1.614,0v9.085A.807.807,0,0,0,228.952,260.27Z"
+                      transform="translate(-216.909 -234.162)"
+                      fill="#ff0f0f"
+                    />
+                    <path
+                      id="Path_10265"
+                      data-name="Path 10265"
+                      d="M299.021,260.27a.807.807,0,0,0,.807-.807v-9.085a.807.807,0,1,0-1.614,0v9.085A.807.807,0,0,0,299.021,260.27Z"
+                      transform="translate(-282.652 -234.162)"
+                      fill="#ff0f0f"
+                    />
+                  </svg>
+                </div>
+                <h5>Delete Site</h5>
+              </div>
+              <div class="is-flex is-end is-align-center">
+                <a href="#" class="pm-modal_close">
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+            </div>
+            <div class="pm-modal_body">
+              <p>
+                Are you sure you want to delete this site and all it’s contents?
+              </p>
+            </div>
+            <div class="pm-modal_footer is-flex is-center is-gap-10">
+              <button class="is-btn">cancel</button>
+              <button class="is-btn is-btn_red">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="pm-modal" id="create-project">
+          <div class="pm-modal_cntr">
+            <div class="pm-modal_header is-border is-flex is-between is-gap-15">
+              <h6 class="is-grow">Create a Project</h6>
+              <div class="is-flex is-end is-align-center">
+                <div class="pm-dropdown pm-dropdown_option pm-dropdown_right">
+                  <a href="#" class="is-circle">
+                    <i class="material-icons">more_vert</i>
+                  </a>
+                  <ul class="pm-dropdown_menu">
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Remove</a></li>
+                  </ul>
+                </div>
+                <a href="#" class="pm-modal_close">
+                  <i class="material-icons">close</i>
+                </a>
+              </div>
+            </div>
+            <div class="pm-modal_body">
+              <div class="pm-group">
+                <label>Id</label>
+                <input type="text" class="pm-control" placeholder="ST-34536" />
+              </div>
+              <div class="pm-group">
+                <label>Name</label>
+                <input type="text" class="pm-control" placeholder="ST-34536" />
+              </div>
+              <div class="is-flex is-wrap is-gap-15">
+                <div class="pm-group is-grow">
+                  <label>phone</label>
+                  <input
+                    type="text"
+                    class="pm-control"
+                    placeholder="ST-34536"
+                  />
+                </div>
+                <div class="pm-group is-grow">
+                  <label>email</label>
+                  <input
+                    type="text"
+                    class="pm-control"
+                    placeholder="ST-34536"
+                  />
+                </div>
+              </div>
+
+              <div class="pm-group">
+                <label>Website</label>
+                <input type="text" class="pm-control" placeholder="ST-34536" />
+              </div>
+              <div class="pm-group">
+                <label>Address</label>
+                <input type="text" class="pm-control" placeholder="ST-34536" />
+              </div>
+              <div class="pm-group">
+                <label>description</label>
+                <textarea
+                  type="text"
+                  class="pm-control"
+                  placeholder="ST-34536"
+                ></textarea>
+              </div>
+            </div>
+            <div class="pm-modal_footer is-border is-flex is-center is-gap-10">
+              <button class="is-btn is-btn_secondary">cancel</button>
+              <button class="is-btn is-btn_primary">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="dbd-body">
+          <div class="container-fluid">
+            <!-- <div class="is-flex is-gap-30 is-wrap">
+              <div class="pm-card pm-card_shadow pd-15 is-grow">
+                <div class="pm-car_header">
+                  <h6>Multi-Hazard Risk Assessment of Schools Project</h6>
+                  <div class="is-flex mt-10">
+                    <i class="material-icons mr-05">place</i>
+                    <p>Marin Rural Municipality and Dudhouli Municipality</p>
+                  </div>
+                </div>
+                <div class="pm-card_body">
+                  <div class="gap-1 is-flex is-wrap is-between">
+                    <div class="project-summary is-grow">
+                      <h5 class="mb-05">32</h5>
+                      <p class="fs-md">Schools</p>
+                    </div>
+                    <div class="project-summary is-grow">
+                      <h5 class="mb-05">2</h5>
+                      <p class="fs-md">Districts</p>
+                    </div>
+                    <div class="project-summary is-grow">
+                      <h5 class="mb-05">10</h5>
+                      <p class="fs-md">users</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div> -->
+
+            <div class="row mhra-project_grid">
+              <div class="grid-xl-3 grid-lg-4 grid-md-6 grid-sm-12">
+                <div
+                  class="pm-card pm-card_bg pm-card_border-dash pd-15 is-column is-flex is-center is-align-center mb-25"
+                >
+                  <i class="material-icons mb-05">add_circle_outline</i>
+                  <h6>Create Project</h6>
+                </div>
+              </div>
+              <div class="grid-xl-3 grid-lg-4 grid-md-6 grid-sm-12">
+                <div class="pm-card pm-card_shadow pd-15 is-grow mb-25">
+                  <div class="pm-car_header">
+                    <div class="is-flex is-betweem is-align-start">
+                      <h6 class="is-grow mr-15">
+                        Multi-Hazard Risk Assessment of Schools Project
+                      </h6>
+                      <div
+                        class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                      >
+                        <a href="#" class="is-circle">
+                          <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="pm-dropdown_menu">
+                          <li><a href="#">Edit</a></li>
+                          <li><a href="#">Remove</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="is-flex mt-10">
+                      <i class="material-icons mr-05">place</i>
+                      <p>Marin Rural Municipality and Dudhouli Municipality</p>
+                    </div>
+                  </div>
+                  <div class="pm-card_body mt-15">
+                    <div class="gap-1 is-flex is-wrap is-between">
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">32</h5>
+                        <p class="fs-md">Schools</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">2</h5>
+                        <p class="fs-md">Districts</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">10</h5>
+                        <p class="fs-md">users</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-xl-3 grid-lg-4 grid-md-6 grid-sm-12">
+                <div class="pm-card pm-card_shadow pd-15 is-grow mb-25">
+                  <div class="pm-car_header">
+                    <div class="is-flex is-betweem is-align-start">
+                      <h6 class="is-grow mr-15">
+                        Multi-Hazard Risk Assessment of Schools Project
+                      </h6>
+                      <div
+                        class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                      >
+                        <a href="#" class="is-circle">
+                          <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="pm-dropdown_menu">
+                          <li><a href="#">Edit</a></li>
+                          <li><a href="#">Remove</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="is-flex mt-10">
+                      <i class="material-icons mr-05">place</i>
+                      <p>Marin Rural Municipality and Dudhouli Municipality</p>
+                    </div>
+                  </div>
+                  <div class="pm-card_body mt-15">
+                    <div class="gap-1 is-flex is-wrap is-between">
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">32</h5>
+                        <p class="fs-md">Schools</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">2</h5>
+                        <p class="fs-md">Districts</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">10</h5>
+                        <p class="fs-md">users</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-xl-3 grid-lg-4 grid-md-6 grid-sm-12">
+                <div class="pm-card pm-card_shadow pd-15 is-grow mb-25">
+                  <div class="pm-car_header">
+                    <div class="is-flex is-betweem is-align-start">
+                      <h6 class="is-grow mr-15">
+                        Multi-Hazard Risk Assessment of Schools Project
+                      </h6>
+                      <div
+                        class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                      >
+                        <a href="#" class="is-circle">
+                          <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="pm-dropdown_menu">
+                          <li><a href="#">Edit</a></li>
+                          <li><a href="#">Remove</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="is-flex mt-10">
+                      <i class="material-icons mr-05">place</i>
+                      <p>Marin Rural Municipality and Dudhouli Municipality</p>
+                    </div>
+                  </div>
+                  <div class="pm-card_body mt-15">
+                    <div class="gap-1 is-flex is-wrap is-between">
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">32</h5>
+                        <p class="fs-md">Schools</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">2</h5>
+                        <p class="fs-md">Districts</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">10</h5>
+                        <p class="fs-md">users</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-xl-3 grid-lg-4 grid-md-6 grid-sm-12">
+                <div class="pm-card pm-card_shadow pd-15 is-grow mb-25">
+                  <div class="pm-car_header">
+                    <div class="is-flex is-betweem is-align-start">
+                      <h6 class="is-grow mr-15">
+                        Multi-Hazard Risk Assessment of Schools Project
+                      </h6>
+                      <div
+                        class="pm-dropdown pm-dropdown_option pm-dropdown_right"
+                      >
+                        <a href="#" class="is-circle">
+                          <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="pm-dropdown_menu">
+                          <li><a href="#">Edit</a></li>
+                          <li><a href="#">Remove</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="is-flex mt-10">
+                      <i class="material-icons mr-05">place</i>
+                      <p>Marin Rural Municipality and Dudhouli Municipality</p>
+                    </div>
+                  </div>
+                  <div class="pm-card_body mt-15">
+                    <div class="gap-1 is-flex is-wrap is-between">
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">32</h5>
+                        <p class="fs-md">Schools</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">2</h5>
+                        <p class="fs-md">Districts</p>
+                      </div>
+                      <div class="project-summary is-grow">
+                        <h5 class="mb-05">10</h5>
+                        <p class="fs-md">users</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Jquery Core Js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/mhra.js"></script>
+  </body>
+</html>

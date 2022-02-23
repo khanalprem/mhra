@@ -1,0 +1,208 @@
+.pm-dropdown {
+  position: relative;
+  a {
+    position: relative;
+    @include prefix(
+      transition,
+      (all 0.5s ease-in-out),
+      ('web', 'moz', 'ms', 'o')
+    );
+    &.is-border,
+    &.is-light {
+      padding: 10px;
+      @include radius(10px);
+      padding-right: 2rem;
+      display: inline-block;
+    }
+    &.is-light {
+      background-color: var(--primary-light);
+      @include flexbox();
+      @include justify-content(flex-start);
+      @include align-items(center);
+      i {
+        font-size: 1rem;
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        background-color: var(--primary-color);
+        color: var(--clr-white-900);
+        i {
+          color: var(--clr-white-900);
+        }
+      }
+    }
+  }
+  &_option {
+    a.is-circle {
+      &:hover {
+        background-color: var(--clr-primary-100);
+      }
+    }
+    a {
+      &_icon {
+        padding-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &.is-after {
+    a {
+      padding-right: 2rem;
+      &::after {
+        content: '\ea67';
+        font-family: 'IcoFont';
+        position: absolute;
+        top: 50%;
+        @include prefix(
+          transform,
+          translateY(-50%),
+          ('webkit', 'ms', 'moz', 'o')
+        );
+        z-index: 2;
+        right: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  ul {
+    &.pm-dropdown_menu {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      @include prefix(
+        transform,
+        translateY(50px),
+        ('webkit', 'ms', 'moz', 'o')
+      );
+      @include prefix(
+        transition,
+        (all 0.5s ease-in-out),
+        ('web', 'moz', 'ms', 'o')
+      );
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      min-width: 150px;
+      background-color: var(--clr-white-900);
+
+      @include box-shadow(0px 10px 40px rgba(0, 0, 0, 0.2));
+      .search-bar {
+        padding: 0 1rem;
+        .search-wrap {
+          span {
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+          }
+        }
+      }
+      li {
+        margin: 0;
+        a {
+          padding: 0.5rem 0.6125rem;
+          @include prefix(
+            transition,
+            (all 0.4s ease-in-out),
+            ('web', 'moz', 'ms', 'o')
+          );
+          @include flexbox();
+          @include justify-content(flex-start);
+          @include align-items(center);
+          i,
+          svg {
+            margin-right: 0.6125rem;
+            font-size: 1rem;
+            color: var(--clr-body-500);
+            img {
+              max-width: 16px;
+            }
+          }
+          &::after {
+            content: none;
+          }
+          &:hover {
+            background-color: var(--clr-primary-100);
+          }
+        }
+      }
+      &.is-before {
+        &::before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-top: 0.3rem solid;
+          border-right: 0.3rem solid transparent;
+          border-bottom: 0;
+          border-left: 0.3rem solid transparent;
+          position: absolute;
+          left: 30px;
+          top: -10px;
+          @include box-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+        }
+      }
+    }
+  }
+  &.is-light {
+    ul {
+      &.pm-dropdown-menu {
+        min-width: 180px;
+        li {
+          a {
+            font-weight: 400;
+            font-size: 0.8rem;
+          }
+          &.header {
+            font-size: 0.875rem;
+            padding: 0.35rem 0.6125rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  &_right {
+    ul {
+      &.pm-dropdown_menu {
+        right: 0;
+        left: auto;
+        &::before,
+        &::after {
+          right: 10px;
+          left: auto;
+        }
+      }
+    }
+  }
+  &_left {
+    ul {
+      &.pm-dropdown_menu {
+        left: 0;
+        &::before,
+        &::after {
+          right: 10px;
+          left: auto;
+        }
+      }
+    }
+  }
+  &.mlr-10 {
+    margin: 0 10px;
+  }
+  &_show {
+    ul {
+      &.pm-dropdown_menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: translateY(0);
+        @include prefix(transform, (translateY(0)), ('web', 'moz', 'ms', 'o'));
+      }
+    }
+  }
+}
