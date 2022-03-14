@@ -1,13 +1,15 @@
-.custom-checkbox {
+.pm-checkbox {
   @include flexbox();
   @include justify-content(flex-start);
-  @include align-items(center);
+  @include align-items(start);
   position: relative;
   margin-bottom: 0.6125rem;
 
   label {
     margin: 0;
-    font-weight: 500;
+    i {
+      font-size: var(--fs-h6);
+    }
   }
 
   input {
@@ -29,19 +31,16 @@
       vertical-align: text-top;
       width: 18px;
       height: 18px;
+      @include flex-value(0 0 18px);
+      max-width: 18px;
       background: var(--clr-white-900);
-      border: 1.5px solid var(--clr-body-300);
+      border: 2px solid var(--clr-body-500);
       @include radius(4px);
     }
 
     // Box focus
     &:focus + label:before {
       box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-    }
-
-    // Box checked
-    &:checked + label:before {
-      background: var(--clr-priamry-600);
     }
 
     // Disabled state label.
@@ -71,6 +70,7 @@
 
     &:checked + label:before {
       border-color: var(--clr-priamry-600);
+      background-color: var(--clr-primary-600);
     }
 
     &:checked + label {
@@ -86,7 +86,7 @@
   // }
 }
 
-.custom-radio {
+.pm-radio {
   @include flexbox();
   @include justify-content(flex-start);
   @include align-items(center);

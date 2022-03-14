@@ -499,6 +499,9 @@ body {
     (all 0.4s ease-in-out),
     ('webkit', 'ms', 'moz', 'o')
   );
+  i {
+    font-size: var(--fs-h5);
+  }
   img {
     max-height: 40px;
   }

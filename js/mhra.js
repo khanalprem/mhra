@@ -18,14 +18,6 @@ $sidebarTop = $('.fix-sidebar').css({ top: $dhHeight + 15 });
 $('.pm-calendar').css({ 'max-width': $cropWidth });
 
 $(document).ready(function () {
-  setTimeout(
-    function () {
-      $('.is-animation').addClass('is-active');
-    },
-
-    500
-  );
-
   function switcher() {
     $('.switcher-wrapper span').on('click', function () {
       $(this).closest('.switcher-wrapper').toggleClass('is-active');
@@ -33,15 +25,6 @@ $(document).ready(function () {
       $(this).toggleClass('is-active');
     });
   }
-
-  /*==================================
-   Toggle Button
- ==================================*/
-  $('.toggle-button').on('click', function (e) {
-    e.preventDefault();
-    $('body').toggleClass('Is-toggle');
-    $(this).toggleClass('active');
-  });
 
   /*==================================
    Dashboard menu icon
@@ -192,17 +175,13 @@ $(document).ready(function () {
     });
   }
 
-  function equalHeight() {
-    var highestBox = 0;
-
-    $('.major-features-card .card-box').each(function () {
-      if ($(this).height() > highestBox) {
-        highestBox = $(this).height();
-      }
+  function mapToggle() {
+    $('.map-aside_toggle').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('dbd-map-_active');
+      $('.dbd-map').toggleClass('dbd-map_active');
     });
-    $('.major-features-card .card-box').height(highestBox);
   }
-
   $('.single-slider').slick({
     slidesToShow: 1,
     arrows: true,
@@ -229,7 +208,6 @@ $(document).ready(function () {
     openModal();
     closeModal();
     pmDropdown();
-    equalHeight();
-    showMenu();
+    mapToggle();
   });
 });

@@ -1,6 +1,6 @@
 .acc {
   .acc-list {
-    .acc-header {
+    &_header {
       position: relative;
       padding: 0.5rem 0;
       @include flexbox();
@@ -46,8 +46,9 @@
         @include justify-content(space-between);
       }
     }
-    .acc-body {
+    &_body {
       display: none;
+      padding: 0.5rem 0;
       &::-webkit-scrollbar {
         width: 4px;
         background: var(--clr-body-300);
@@ -61,22 +62,17 @@
         @include radius(4px);
         background: var(--border-dark);
       }
-      .custom-checkbox {
-        label {
-          font-weight: 400;
-          text-transform: capitalize;
-        }
-      }
+
       ul {
         &.is-list {
           li {
             &:hover,
-            &.is-active {
+            &.is-list_active {
               background-color: var(--secondary-100);
               cursor: pointer;
             }
           }
-          &.is-after {
+          &_after {
             li {
               position: relative;
             }
@@ -115,27 +111,27 @@
         }
       }
     }
-    &.is-active {
-      .acc-header {
+    &_active {
+      .acc-list_header {
         h5 {
           color: var(--primary-color);
         }
       }
-      .acc-body {
+      .acc-list_body {
         display: block;
       }
     }
   }
-  &.is-before {
+  &-before {
     .acc-list {
-      .acc-header {
+      .acc-list_header {
         &::before {
           content: 'arrow_drop_down';
           margin-right: 0.5rem;
         }
       }
-      &.is-active {
-        .acc-header {
+      &_active {
+        .acc-list_header {
           &::before {
             content: 'arrow_drop_up';
             margin-right: 0.5rem;
@@ -144,19 +140,17 @@
       }
     }
   }
-  &.is-after {
+  &-after {
     .acc-list {
-      .acc-header {
+      .acc-list_header {
         &::after {
           content: 'expand_more';
           width: 24px;
           height: 24px;
-          margin-left: 0.6125rem;
-          font-size: 1rem;
         }
       }
-      &.is-active {
-        .acc-header {
+      &_active {
+        .acc-list_header {
           &::after {
             content: 'expand_less';
             color: var(--primary-color);
@@ -165,13 +159,13 @@
       }
     }
   }
-  &.acc-border {
+  &_border {
     @include radius(4px);
     .acc-list {
-      .acc-header {
+      &_header {
         padding: 0.5rem 0.6125rem;
       }
-      .acc-body {
+      &_body {
         padding: 0;
         ul {
           li {
