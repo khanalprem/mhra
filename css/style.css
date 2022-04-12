@@ -89,7 +89,7 @@ select {
   }
 }
 ::selection {
-  background-color: var(--selection-color);
+  background-color: var(--clr-primary-100);
 }
 
 :root {
